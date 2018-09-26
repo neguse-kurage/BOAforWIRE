@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+		<title>BOA</title>
+		<script src="BOA.js"></script>
+    <script src="Gcode.js"></script>
+    </head>
+
+    <body>
+      File Name<input type="text" id="Name" value="test.gcode"><br>
+      <br>
+      Frame size<input type="text" id="frame_size" value="860">mm<br>
+      Machine hight<input type="text" id="machine_hight" value="100">mm<br>
+      <br>
+      Extruder temperature<input type="text" id="Extruder" value="230">℃<br>
+      Head speed<input type="text" id="HSpeed" value="500">mm/min<br>
+      Extrude speed<input type="text" id="ESpeed" value="7">mm/10mm<br>
+      <br>
+      StartX<input type="text" id="StartX" value="0">mm<br>
+      StartY<input type="text" id="StartY" value="0">mm<br>
+      X<input type="text" id="X" value="200">mm<br>
+      Y<input type="text" id="Y" value="200">mm<br>
+      Print hight<input type="text" id="print_hight" value="100">mm<br>
+      G_Width<input type="text" id="G_Width" value="5">mm<br>
+      Times<input type="text" id="Times" value="3">times<br>
+      <br>
+      <a id="download" href="#" download="BOA.gcode" onclick="OF()">Make Gcode</a><br>
+    </body>
+</html>
