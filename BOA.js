@@ -2,7 +2,6 @@ var Name; //ファイル名
 
 var frame_size;
 var machine_hight;
-var wire_length;
 
 var Extruder; //ヘッド温度
 var HSpeed; //ヘッド速度
@@ -36,7 +35,6 @@ function get(){
 
   frame_size = Number(document.getElementById('frame_size').value);
   machine_hight = Number(document.getElementById('machine_hight').value);
-  wire_length = Number(document.getElementById('wire_length').value);
 
   Extruder = Number(document.getElementById('Extruder').value);
   HSpeed = Number(document.getElementById('HSpeed').value);
@@ -56,7 +54,6 @@ function get(){
 function writeParameter(){  //設定をGcodeに記述
   content = [ ";Frame size : " + frame_size + "\n",
               ";Machine hight : " + machine_hight + "\n",
-              ";Wire length : " + wire_length + "\n",
               "\n",
               ";Extruder temperature : " + Extruder + "\n",
               ";Head speed : " + HSpeed + "\n",
@@ -64,7 +61,7 @@ function writeParameter(){  //設定をGcodeに記述
               ";Extrude speed (short) : " + ESpeed_s + "\n",
               "\n",].join("");
 
-  content += [ ";Hight : " + print_hight + "\n",
+  content += [ ";Hight : " + Print_Hight + "\n",
               ";StartX : " + StartX + "\n",
               ";StartY : " + StartY + "\n",
               ";X : " + X + "\n",
