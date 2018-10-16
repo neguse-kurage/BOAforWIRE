@@ -8,7 +8,7 @@ var HSpeed; //ヘッド速度
 var ESpeed; //エクストルード速度
 var ESpeed_s; //フィラメント速度(短辺)
 
-var Print_Hight;  //高さ
+var print_hight;  //高さ
 var StartX; //原点
 var StartY;
 var X;  //範囲
@@ -61,7 +61,7 @@ function writeParameter(){  //設定をGcodeに記述
               ";Extrude speed (short) : " + ESpeed_s + "\n",
               "\n",].join("");
 
-  content += [ ";Hight : " + Print_Hight + "\n",
+  content += [ ";Hight : " + print_hight + "\n",
               ";StartX : " + StartX + "\n",
               ";StartY : " + StartY + "\n",
               ";X : " + X + "\n",

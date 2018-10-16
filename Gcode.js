@@ -8,7 +8,12 @@ function makeGcode(){
 
   for(var t=0; t<Times; t++){ //重ねるレイヤー数
     for(var i=0; i<X/G_Width; i++){
-      after_point = [G_Width*i, Y*(i%2), print_hight];
+      after_point = [StartX + G_Width*i, StartY + Y*((i+1)%2), print_hight];
+      movement_calculater(before_point, after_point);
+      content += ["G1 X" + move_x + " Y" + move_y + " Z" + move_z + " E" + ESpeed + "\n",
+                  "G92\n"].join("");
+
+      after_point = [StartX + G_Width*(i+1), StartY + Y*(i%2), print_hight];
       movement_calculater(before_point, after_point);
       content += ["G1 X" + move_x + " Y" + move_y + " Z" + move_z + " E" + ESpeed + "\n",
                   "G92\n"].join("");
